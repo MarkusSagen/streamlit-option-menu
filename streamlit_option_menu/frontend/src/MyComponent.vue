@@ -2,7 +2,7 @@
     <div class="menu">
         <div class="container-xxl d-flex flex-column flex-shrink-0" :class="{'p-3': !isHorizontal, 'p-h':isHorizontal, 'nav-justified': isHorizontal}" :style="styleObjectToString(styles['container'])">
             <template v-if="menuTitle">
-                <a href="#" class="menu-title align-items-center mb-md-0 me-md-auto text-decoration-none"
+                <a href="#/" class="menu-title align-items-center mb-md-0 me-md-auto text-decoration-none"
                 :style="styleObjectToString(styles['menu-title'])"
                 >
                     <i class="icon" :class="menuIcon" :style="styleObjectToString(styles['menu-icon'])"></i>
@@ -17,7 +17,7 @@
                 :style="styleObjectToString(styles['nav-item'])"
                 >
                     <hr :class="{vr: isHorizontal}" v-if="option === '---'" :style="styleObjectToString(styles['separator'])">
-                    <a v-else href="#" class="nav-link" :class="{active: i == selectedIndex, 'nav-link-horizontal':isHorizontal}" 
+                    <a v-else href="#/" class="nav-link" :class="{active: i == selectedIndex, 'nav-link-horizontal':isHorizontal}" 
                     @click="onClicked(i, option)" aria-current="page" 
                     :style="styleObjectToString(styles['nav-link']) + styleObjectToString(styles['nav-link-selected'], i == selectedIndex)">
                         <i class="icon" :class="icons[i]" :style="styleObjectToString(styles['icon'])"></i>
